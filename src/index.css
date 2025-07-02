@@ -1,1 +1,70 @@
 @import 'tailwindcss';
+
+@theme {
+    --color-*: initial;
+    --color-dark-orange: #d87d4a;
+    --color-light-orange: #fbaf85;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-black: #101010;
+    --color-gray-500: #f1f1f1;
+    --color-gray-200: #fafafa;
+
+    --font-*: initial;
+    --font-manrope: 'Manrope', sans-serif;
+
+    --text-*: initial;
+    --text-h1: 56px;
+    --text-h1--font-weight: 700;
+    --text-h1--light-height: 58px;
+    --text-h1--letter-spacing: 2px;
+    --text-h2: 40px;
+    --text-h2--font-weight: 700;
+    --text-h2--light-height: 44px;
+    --text-h2--letter-spacing: 1.5px;
+    --text-h3: 32px;
+    --text-h3--font-weight: 700;
+    --text-h3--light-height: 36px;
+    --text-h3--letter-spacing: 1.15px;
+    --text-h4: 28px;
+    --text-h4--font-weight: 700;
+    --text-h4--light-height: 38px;
+    --text-h4--letter-spacing: 2px;
+    --text-h5: 24px;
+    --text-h5--font-weight: 700;
+    --text-h5--light-height: 33px;
+    --text-h5--letter-spacing: 1.7px;
+    --text-h6: 18px;
+    --text-h6--font-weight: 700;
+    --text-h6--light-height: 24px;
+    --text-h6--letter-spacing: 1.3px;
+    --text-overline: 14px;
+    --text-overline--font-weight: 400;
+    --text-overline--light-height: 19px;
+    --text-overline--letter-spacing: 10px;
+    --text-sub-title: 13px;
+    --text-sub-title--font-weight: 700;
+    --text-sub-title--light-height: 25px;
+    --text-sub-title--letter-spacing: 1px;
+    --text-sub-body: 15px;
+    --text-sub-body--font-weight: 500;
+    --text-sub-body--light-height: 25px;
+
+    --font-weight-*: initial;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+
+    --breakpoint-*: initial;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1440px;
+
+    --spacing: 4px;
+}
+
+:root {
+    font-family: var(--font-manrope);
+    color: var(--color-black);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
