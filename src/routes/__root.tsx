@@ -1,14 +1,14 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
-import * as React from 'react';
+import { Fragment } from 'react';
+import TopBar from '../components/TopBar';
 
 function RootComponent() {
     return (
-        <React.Fragment>
-            <div>Hello from root</div>
+        <Fragment>
+            <TopBar />
             <Outlet />
-            <TanStackRouterDevtools />
-        </React.Fragment>
+            {/* <TanStackRouterDevtools /> */}
+        </Fragment>
     );
 }
 
