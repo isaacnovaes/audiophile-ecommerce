@@ -1,9 +1,9 @@
-import desktopImage from '../assets/home/desktop/image-hero.jpg';
-import mobileImage from '../assets/home/mobile/image-header.jpg';
-import tabletImage from '../assets/home/tablet/image-header.jpg';
+import desktopImage from '../assets/home/desktop/hero.jpg';
+import mobileImage from '../assets/home/mobile/hero.jpg';
+import tabletImage from '../assets/home/tablet/hero.jpg';
 import { BREAKPOINTS } from '../utils/constants';
 
-const HomeBanner = () => {
+const HomeHero = () => {
     return (
         <picture>
             <source media={`(min-width: ${BREAKPOINTS.desktop})`} srcSet={desktopImage} />
@@ -16,4 +16,4 @@ const HomeBanner = () => {
         </picture>
     );
 };
-export default HomeBanner;
+export default HomeHero;
