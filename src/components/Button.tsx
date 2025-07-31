@@ -11,7 +11,8 @@ interface ButtonProps extends Omit<ComponentPropsWithoutRef<'button'>, 'classNam
 const buttonClassNames = {
     primary: 'bg-dark-orange hover:bg-light-orange text-white',
     'primary-black': 'bg-black hover:bg-[#979797] text-white',
-    'primary-transparent': 'bg-transparent border-1 border-black hover:bg-black text-white',
+    'primary-transparent':
+        'bg-transparent border-1 border-black hover:bg-black text-black hover:text-white',
     secondary: 'bg-white border-1 text-black border-black hover:text-white hover:bg-black',
     link: 'text-black/[50%] flex items-center justify-between gap-x-4 hover:text-dark-orange',
 } as const satisfies Record<Variant, string>;
