@@ -22,7 +22,7 @@ const Button = (props: ButtonProps) => {
 
     return (
         <button
-            className={`relative z-10 cursor-pointer px-8 py-4 text-[13px] font-bold tracking-[1px] uppercase transition-colors duration-300 ${buttonClassNames[variant]}`}
+            className={`relative z-10 cursor-pointer px-8 py-4 text-[13px] font-bold tracking-[1px] uppercase ${buttonClassNames[variant]}`}
             // eslint-disable-next-line react/button-has-type
             type={type ?? 'button'}
             {...propsRest}

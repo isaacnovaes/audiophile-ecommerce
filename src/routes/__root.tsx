@@ -1,14 +1,15 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router';
-import { Fragment } from 'react';
+import Footer from '../components/Footer';
 import TopBar from '../components/TopBar';
 
 function RootComponent() {
     return (
-        <Fragment>
+        <div className='**:transition-colors **:duration-300'>
             <TopBar />
             <Outlet />
             {/* <TanStackRouterDevtools /> */}
-        </Fragment>
+            <Footer />
+        </div>
     );
 }
 
