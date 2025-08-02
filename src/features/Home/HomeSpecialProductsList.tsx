@@ -51,7 +51,7 @@ const HomeSpecialProductsList = () => {
                 <h1 className='text-h4 uppercase'>zx7 speaker</h1>
                 <Button label='see product' variant='primary-transparent' />
             </section>
-            <section className='tablet:grid-rows-1 tablet:grid-cols-2 desktop:gap-[30px] grid grid-cols-1 grid-rows-2 gap-6 target:gap-[11px]'>
+            <section className='tablet:mb-[96px] desktop:mb-50 tablet:grid-rows-1 tablet:grid-cols-2 desktop:gap-[30px] mb-30 grid grid-cols-1 grid-rows-2 gap-6 target:gap-[11px]'>
                 <picture>
                     <source
                         media={`(min-width: ${BREAKPOINTS.desktop})`}
@@ -64,7 +64,7 @@ const HomeSpecialProductsList = () => {
                         src={yx1MobileImage}
                     />
                 </picture>
-                <div className='tablet:pl-[41px] desktop:pl-[95px] flex flex-col items-start justify-center gap-y-8 rounded-lg bg-gray-200 pl-6'>
+                <div className='tablet:pl-[41px] desktop:pl-[95px] flex flex-col items-start justify-center gap-y-8 rounded-lg bg-gray-500 pl-6'>
                     <h1 className='text-h4 uppercase'>xy1 speaker</h1>
                     <Button label='see product' variant='primary-transparent' />
                 </div>

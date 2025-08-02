@@ -1,5 +1,6 @@
 import AppContainer from '../../components/AppContainer';
 import Button from '../../components/Button';
+import CompanyInfo from '../../components/CompanyInfo';
 import GeneralProductCategoriesList from '../../components/GeneralProductCategoriesList';
 import HomeHero from '../../components/HomeHero';
 import HomeSpecialProductsList from './HomeSpecialProductsList';
@@ -24,6 +25,7 @@ const Home = () => {
                 </section>
                 <GeneralProductCategoriesList />
                 <HomeSpecialProductsList />
+                <CompanyInfo />
             </AppContainer>
         </div>
     );
