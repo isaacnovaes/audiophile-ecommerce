@@ -38,7 +38,7 @@ function GeneralProductCategoriesList() {
             {PRODUCT_CATEGORIES.map((c) => (
                 <Link
                     key={c.pid}
-                    className='relative flex w-full flex-col items-center before:absolute before:bottom-0 before:-z-1 before:block before:h-[80%] before:w-full before:rounded-lg before:bg-gray-200'
+                    className='relative flex w-full flex-col items-center before:absolute before:bottom-0 before:-z-1 before:block before:h-[80%] before:w-full before:rounded-lg before:bg-gray-500'
                     params={c.params}
                     to={c.to}
                 >
