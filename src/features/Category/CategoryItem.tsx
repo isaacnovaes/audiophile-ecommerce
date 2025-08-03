@@ -31,7 +31,7 @@ const CategoryItem = ({ product }: { readonly product: Data }) => {
                 <img alt={product.name} className='rounded-lg' />
             </picture>
             <div className='tablet:w-[572px] desktop:w-[445px] desktop:items-start flex w-[327px] flex-col items-center'>
-                {product.name ? (
+                {product.new ? (
                     <span className='text-overline text-dark-orange mb-6 uppercase'>
                         new product
                     </span>
