@@ -7,7 +7,7 @@ import HomeSpecialProductsList from './HomeSpecialProductsList';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <HomeHero />
             <AppContainer>
                 <section className='desktop:items-start desktop:w-[380px] relative flex h-[calc(100vh-92px)] flex-col items-center justify-normal'>
@@ -27,7 +27,7 @@ const Home = () => {
                 <HomeSpecialProductsList />
                 <CompanyInfo />
             </AppContainer>
-        </div>
+        </>
     );
 };
 export default Home;
