@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import AppContainer from '../../components/AppContainer';
 import Button from '../../components/Button';
 import CompanyInfo from '../../components/CompanyInfo';
@@ -21,7 +22,9 @@ const Home = () => {
                         Experience natural, lifelike audio and exceptional build quality made for
                         the passionate music enthusiast.
                     </h3>
-                    <Button label='see product' />
+                    <Link params={{ slug: 'xx99-mark-two-headphones' }} to='/product-detail/$slug'>
+                        <Button label='see product' />
+                    </Link>
                 </section>
                 <GeneralProductCategoriesList />
                 <HomeSpecialProductsList />
