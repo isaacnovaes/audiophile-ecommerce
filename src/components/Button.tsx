@@ -14,7 +14,7 @@ const buttonClassNames = {
     'primary-transparent':
         'bg-transparent border-1 border-black hover:bg-black text-black hover:text-white',
     secondary: 'bg-white border-1 text-black border-black hover:text-white hover:bg-black',
-    link: 'text-black/50 flex items-center justify-between gap-x-4 hover:text-dark-orange',
+    link: 'text-black/50 flex items-center justify-between gap-x-4 group-hover:text-dark-orange hover:text-dark-orange',
 } as const satisfies Record<Variant, string>;
 
 const Button = (props: ButtonProps) => {

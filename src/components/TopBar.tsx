@@ -13,7 +13,7 @@ const TopBar = () => {
             className={`relative top-0 right-0 left-0 z-10 ${location.pathname !== '/home' ? 'bg-black' : ''}`}
         >
             <AppContainer>
-                <div className='tablet:gap-x-10 flex h-23 items-center justify-between border-b-1 border-b-[#979797]/[10%]'>
+                <div className='tablet:gap-x-10 flex h-23 items-center justify-between border-b-1 border-b-white/10'>
                     <img alt='Menu icon' className='desktop:hidden' src={HamburgerIcon} />
                     <Link className='tablet:mr-auto desktop:mr-0 cursor-pointer p-2' to='/home'>
                         <img alt='Company logo' src={LogoIcon} />
