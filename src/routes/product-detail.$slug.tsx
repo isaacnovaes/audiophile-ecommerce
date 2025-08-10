@@ -57,17 +57,16 @@ function RouteComponent() {
                         height={352}
                         media={`(max-width: ${BREAKPOINTS.tablet})`}
                         srcSet={product.image.mobile}
-                        width={327}
                     />
-                    <img alt={product.name} className='rounded-lg' />
+                    <img alt={product.name} className='tablet:max-w-none max-w-100 rounded-lg' />
                 </picture>
-                <div className='tablet:w-[340px] desktop:w-[445px] desktop:items-start flex w-[327px] flex-col items-start'>
+                <div className='tablet:w-[340px] desktop:items-start flex flex-col items-start'>
                     {product.new ? (
-                        <span className='text-overline text-dark-orange mb-6 uppercase'>
+                        <span className='text-overline text-dark-orange mb-6 text-left uppercase'>
                             new product
                         </span>
                     ) : null}
-                    <h3 className='text-h4 desktop:text-h2 mb-6 text-black uppercase'>
+                    <h3 className='text-h4 desktop:text-h2 mb-6 text-left text-black uppercase'>
                         {product.name}
                     </h3>
                     <p className='text-body desktop:text-left mb-6 text-left text-black/50'>
@@ -108,6 +107,59 @@ function RouteComponent() {
                         ))}
                     </ul>
                 </div>
+            </div>
+            <div className='tablet:grid-cols-2 tablet:grid-rows-2 tablet:gap-x-4.5 desktop:grid-cols-[445px_1fr] grid gap-y-5'>
+                <picture>
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.desktop})`}
+                        srcSet={product.gallery.first.desktop}
+                    />
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.first.tablet}
+                    />
+                    <source
+                        height={174}
+                        media={`(max-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.first.mobile}
+                    />
+                    <img alt={product.name} className='rounded-lg' />
+                </picture>
+                <picture className='tablet:row-start-2 tablet:row-end-3'>
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.desktop})`}
+                        srcSet={product.gallery.second.desktop}
+                    />
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.second.tablet}
+                    />
+                    <source
+                        height={174}
+                        media={`(max-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.second.mobile}
+                    />
+                    <img alt={product.name} className='rounded-lg' />
+                </picture>
+                <picture className='tablet:row-span-full'>
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.desktop})`}
+                        srcSet={product.gallery.third.desktop}
+                    />
+                    <source
+                        media={`(min-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.third.tablet}
+                    />
+                    <source
+                        height={368}
+                        media={`(max-width: ${BREAKPOINTS.tablet})`}
+                        srcSet={product.gallery.third.mobile}
+                    />
+                    <img
+                        alt={product.name}
+                        className='tablet:h-full tablet:object-cover rounded-lg'
+                    />
+                </picture>
             </div>
             <GeneralProductCategoriesList />
             <CompanyInfo />
