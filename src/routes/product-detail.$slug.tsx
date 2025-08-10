@@ -123,7 +123,10 @@ function RouteComponent() {
                         media={`(max-width: ${BREAKPOINTS.tablet})`}
                         srcSet={product.gallery.first.mobile}
                     />
-                    <img alt={product.name} className='rounded-lg' />
+                    <img
+                        alt={product.name}
+                        className='tablet:h-full tablet:object-cover rounded-lg'
+                    />
                 </picture>
                 <picture className='tablet:row-start-2 tablet:row-end-3'>
                     <source
@@ -139,7 +142,10 @@ function RouteComponent() {
                         media={`(max-width: ${BREAKPOINTS.tablet})`}
                         srcSet={product.gallery.second.mobile}
                     />
-                    <img alt={product.name} className='rounded-lg' />
+                    <img
+                        alt={product.name}
+                        className='tablet:h-full tablet:object-cover rounded-lg'
+                    />
                 </picture>
                 <picture className='tablet:row-span-full'>
                     <source
