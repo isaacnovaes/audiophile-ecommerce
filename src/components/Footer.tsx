@@ -5,7 +5,7 @@ import NavLinks from './NavLinks';
 
 const Footer = () => {
     return (
-        <div className='bg-light-black'>
+        <footer className='bg-light-black'>
             <AppContainer>
                 <div className='desktop:flex desktop:justify-between desktop:pt-[75px] desktop:pb- tablet:pt-[56px]'>
                     <Link className='cursor-pointer p-2' to='/home'>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </div>
                 </div>
             </AppContainer>
-        </div>
+        </footer>
     );
 };
 export default Footer;
