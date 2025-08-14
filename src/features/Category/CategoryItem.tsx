@@ -1,9 +1,9 @@
 import { Link } from '@tanstack/react-router';
 import Button from '../../components/Button';
-import type { Data } from '../../data';
+import type { Product } from '../../types/global';
 import { BREAKPOINTS } from '../../utils/constants';
 
-const CategoryItem = ({ product }: { readonly product: Data }) => {
+const CategoryItem = ({ product }: { readonly product: Product }) => {
     return (
         <div
             key={product.id}

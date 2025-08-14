@@ -1,14 +1,17 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router';
 import Footer from '../components/Footer';
 import TopBar from '../components/TopBar';
+import { CartContextProvider } from '../context/CartContext/CartContextProvider';
 
 function RootComponent() {
     return (
         <div className='**:transition-colors **:duration-300'>
-            <TopBar />
-            <Outlet />
-            {/* <TanStackRouterDevtools /> */}
-            <Footer />
+            <CartContextProvider>
+                <TopBar />
+                <Outlet />
+                {/* <TanStackRouterDevtools /> */}
+                <Footer />
+            </CartContextProvider>
         </div>
     );
 }
