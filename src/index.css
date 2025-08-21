@@ -7,6 +7,7 @@
     --color-white: #fff;
     --color-black: #000;
     --color-light-black: #101010;
+    --color-gray-700: #979797;
     --color-gray-500: #f1f1f1;
     --color-gray-200: #fafafa;
 
@@ -88,4 +89,8 @@
     color: var(--color-black);
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+body:has(dialog[open]) {
+    overflow: hidden;
 }
