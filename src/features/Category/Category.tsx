@@ -1,4 +1,4 @@
-import { ErrorComponent, getRouteApi, Link } from '@tanstack/react-router';
+import { ErrorComponent, getRouteApi } from '@tanstack/react-router';
 import AppContainer from '../../components/AppContainer';
 import Button from '../../components/Button';
 import CompanyInfo from '../../components/CompanyInfo';
@@ -8,7 +8,9 @@ import { CategoryTypeSchema } from '../../types/global';
 import CategoryItem from './CategoryItem';
 
 const Category = () => {
-    const { type } = getRouteApi('/category/$type').useParams();
+    const routeApi = getRouteApi('/category/$type');
+    const { type } = routeApi.useParams();
+    const navigate = getRouteApi('/category/$type').useNavigate();
 
     const categoryTypeValidation = CategoryTypeSchema.safeParse(type);
 
@@ -17,9 +19,12 @@ const Category = () => {
         return (
             <div className='my-10 flex flex-col items-center'>
                 <ErrorComponent error={error} />
-                <Link to='/home'>
-                    <Button label='Go to home' />
-                </Link>
+                <Button
+                    label='Go to home'
+                    onClick={() => {
+                        void navigate({ to: '/home' });
+                    }}
+                />
             </div>
         );
     }

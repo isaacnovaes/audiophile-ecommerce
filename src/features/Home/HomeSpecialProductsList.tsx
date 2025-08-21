@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router';
+import { getRouteApi } from '@tanstack/react-router';
 import yx1DesktopImage from '../../assets/home/desktop/earphones-yx1.jpg';
 import zx9DesktopImage from '../../assets/home/desktop/speaker-zx9.png';
 import yx1MobileImage from '../../assets/home/mobile/earphones-yx1.jpg';
@@ -10,6 +10,8 @@ import Button from '../../components/Button';
 import { BREAKPOINTS } from '../../utils/constants';
 
 const HomeSpecialProductsList = () => {
+    const navigate = getRouteApi('/home').useNavigate();
+
     return (
         <>
             <section className='bg-dark-orange desktop:flex-row desktop:justify-between desktop:px-[130px] desktop:pb-0 desktop:pt-24 desktop:gap-x-20 mb-6 flex flex-col items-center overflow-hidden rounded-lg py-14'>
@@ -45,16 +47,30 @@ const HomeSpecialProductsList = () => {
                         Upgrade to premium speakers that are phenomenally built to deliver truly
                         remarkable sound.
                     </h2>
-                    <Link params={{ slug: 'zx9-speaker' }} to='/product-detail/$slug'>
-                        <Button label='see product' variant='primary-black' />
-                    </Link>
+                    <Button
+                        label='see product'
+                        variant='primary-black'
+                        onClick={() => {
+                            void navigate({
+                                to: '/product-detail/$slug',
+                                params: { slug: 'zx9-speaker' },
+                            });
+                        }}
+                    />
                 </div>
             </section>
             <section className='bg-home-zx7-speaker tablet:pl-[62px] desktop:pl-[95px] mb-6 flex min-h-[320px] flex-col items-start justify-center gap-y-8 rounded-lg pl-6'>
                 <h1 className='text-h4 uppercase'>zx7 speaker</h1>
-                <Link params={{ slug: 'zx7-speaker' }} to='/product-detail/$slug'>
-                    <Button label='see product' variant='primary-transparent' />
-                </Link>
+                <Button
+                    label='see product'
+                    variant='primary-transparent'
+                    onClick={() => {
+                        void navigate({
+                            to: '/product-detail/$slug',
+                            params: { slug: 'zx7-speaker' },
+                        });
+                    }}
+                />
             </section>
             <section className='tablet:mb-[96px] desktop:mb-50 tablet:grid-rows-1 tablet:grid-cols-2 desktop:gap-[30px] mb-30 grid grid-cols-1 grid-rows-2 gap-6 target:gap-[11px]'>
                 <picture>
@@ -71,9 +87,16 @@ const HomeSpecialProductsList = () => {
                 </picture>
                 <div className='tablet:pl-[41px] desktop:pl-[95px] flex flex-col items-start justify-center gap-y-8 rounded-lg bg-gray-500 pl-6'>
                     <h1 className='text-h4 uppercase'>xy1 speaker</h1>
-                    <Link params={{ slug: 'yx1-earphones' }} to='/product-detail/$slug'>
-                        <Button label='see product' variant='primary-transparent' />
-                    </Link>
+                    <Button
+                        label='see product'
+                        variant='primary-transparent'
+                        onClick={() => {
+                            void navigate({
+                                to: '/product-detail/$slug',
+                                params: { slug: 'yx1-earphones' },
+                            });
+                        }}
+                    />
                 </div>
             </section>
         </>

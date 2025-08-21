@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router';
+import { getRouteApi } from '@tanstack/react-router';
 import AppContainer from '../../components/AppContainer';
 import Button from '../../components/Button';
 import CompanyInfo from '../../components/CompanyInfo';
@@ -7,6 +7,7 @@ import HomeHero from '../../components/HomeHero';
 import HomeSpecialProductsList from './HomeSpecialProductsList';
 
 const Home = () => {
+    const navigate = getRouteApi('/home').useNavigate();
     return (
         <>
             <HomeHero />
@@ -22,9 +23,15 @@ const Home = () => {
                         Experience natural, lifelike audio and exceptional build quality made for
                         the passionate music enthusiast.
                     </h3>
-                    <Link params={{ slug: 'xx99-mark-two-headphones' }} to='/product-detail/$slug'>
-                        <Button label='see product' />
-                    </Link>
+                    <Button
+                        label='see product'
+                        onClick={() => {
+                            void navigate({
+                                to: '/product-detail/$slug',
+                                params: { slug: 'xx99-mark-two-headphones' },
+                            });
+                        }}
+                    />
                 </section>
                 <GeneralProductCategoriesList />
                 <HomeSpecialProductsList />
