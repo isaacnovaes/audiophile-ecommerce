@@ -33,7 +33,9 @@ const CartItem = (props: { readonly cart: Cart }) => {
                 >
                     -
                 </button>
-                <span className='text-body font-bold'>{props.cart.quantity}</span>
+                <span className='text-body min-w-[2ch] text-center font-bold'>
+                    {props.cart.quantity}
+                </span>
                 <button
                     className='px-3 text-black/25 hover:cursor-pointer'
                     type='button'
