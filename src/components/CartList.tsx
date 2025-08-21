@@ -25,7 +25,7 @@ const CartItem = (props: { readonly cart: Cart }) => {
             </div>
             <div className='ml-auto flex h-8 items-center justify-between gap-x-3 self-center bg-gray-500'>
                 <button
-                    className='px-3 text-black/25'
+                    className='px-3 text-black/25 hover:cursor-pointer'
                     type='button'
                     onClick={() => {
                         removeCartProduct(props.cart.item);
@@ -35,7 +35,7 @@ const CartItem = (props: { readonly cart: Cart }) => {
                 </button>
                 <span className='text-body font-bold'>{props.cart.quantity}</span>
                 <button
-                    className='px-3 text-black/25'
+                    className='px-3 text-black/25 hover:cursor-pointer'
                     type='button'
                     onClick={() => {
                         addCartProduct(props.cart.item);
