@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState, type ReactNode } from 'react';
 import type { Cart, Product } from '../../types/global';
-import { CartContext } from './CartContext';
+import { CartContext, type TCartContext } from './CartContext';
 
 export const CartContextProvider = (props: { readonly children: ReactNode }) => {
     const [cart, setCart] = useState<Map<string, Cart>>(new Map());
@@ -40,9 +40,13 @@ export const CartContextProvider = (props: { readonly children: ReactNode }) => 
         });
     }, []);
 
-    const context = useMemo(
-        () => ({ cart, addCartProduct, removeCartProduct }),
-        [addCartProduct, cart, removeCartProduct]
+    const removeAllCartProducts = useCallback(() => {
+        setCart(new Map());
+    }, []);
+
+    const context: TCartContext = useMemo(
+        () => ({ cart, addCartProduct, removeCartProduct, removeAllCartProducts }),
+        [addCartProduct, cart, removeCartProduct, removeAllCartProducts]
     );
 
     return <CartContext value={context}>{props.children}</CartContext>;

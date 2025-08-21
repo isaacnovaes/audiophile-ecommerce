@@ -1,25 +1,9 @@
 import { Link, useLocation } from '@tanstack/react-router';
-import CartIcon from '../assets/icons/icon-cart.svg';
 import HamburgerIcon from '../assets/icons/icon-hamburger.svg';
 import LogoIcon from '../assets/icons/logo.svg';
-import { useCart } from '../context/CartContext/CartContext.ts';
 import AppContainer from './AppContainer.tsx';
+import CartIconComp from './CartIconComp.tsx';
 import DesktopNavBar from './DesktopNavBar.tsx';
-
-const CartIconComp = () => {
-    const cart = useCart();
-    const cartQuantity = [...cart.values()].reduce((sum, c) => sum + c.quantity, 0);
-    return (
-        <div className='relative'>
-            <img alt='Cart icon' src={CartIcon} />
-            {cartQuantity > 0 ? (
-                <span className='bg-dark-orange absolute -top-3 -right-3 grid size-5 place-content-center rounded-full text-[12px] text-white'>
-                    {cartQuantity}
-                </span>
-            ) : null}
-        </div>
-    );
-};
 
 const TopBar = () => {
     const location = useLocation();
