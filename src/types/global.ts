@@ -35,6 +35,7 @@ export const ProductSchema = z.object({
             image: ResponsiveImage,
         })
     ),
+    cartImage: z.string(),
 });
 
 export type Product = z.infer<typeof ProductSchema>;

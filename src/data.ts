@@ -125,6 +125,14 @@ import sharedZX7SpeakerTablet from './assets/shared/tablet/image-zx7-speaker.jpg
 import sharedZX9SpeakerDesktop from './assets/shared/desktop/image-zx9-speaker.jpg';
 import sharedZX9SpeakerMobile from './assets/shared/mobile/image-zx9-speaker.jpg';
 import sharedZX9SpeakerTablet from './assets/shared/tablet/image-zx9-speaker.jpg';
+
+import cartXX59Headphones from './assets/cart/image-xx59-headphones.jpg';
+import cartXX99MarkOneHeadphones from './assets/cart/image-xx99-mark-one-headphones.jpg';
+import cartXX99MarkTwoHeadphones from './assets/cart/image-xx99-mark-two-headphones.jpg';
+import cartXY1Earphones from './assets/cart/image-yx1-earphones.jpg';
+import cartZX7Speakers from './assets/cart/image-zx7-speaker.jpg';
+import cartZX9Speakers from './assets/cart/image-zx9-speaker.jpg';
+
 import type { Product } from './types/global';
 
 export const data: Product[] = [
@@ -143,6 +151,7 @@ export const data: Product[] = [
             tablet: yx1EarphoneCategoryImageTablet,
             desktop: yx1EarphoneCategoryImageDesktop,
         },
+        cartImage: cartXY1Earphones,
         new: true,
         price: 599,
         description:
@@ -233,6 +242,7 @@ export const data: Product[] = [
             tablet: xx59HeadphoneCategoryImageTablet,
             desktop: xx59HeadphoneCategoryImageDesktop,
         },
+        cartImage: cartXX59Headphones,
         new: false,
         price: 899,
         description:
@@ -319,6 +329,7 @@ export const data: Product[] = [
             tablet: xx99MarkOneHeadphoneCategoryImageTablet,
             desktop: xx99MarkOneHeadphoneCategoryImageDesktop,
         },
+        cartImage: cartXX99MarkOneHeadphones,
         new: false,
         price: 1750,
         description:
@@ -405,6 +416,7 @@ export const data: Product[] = [
             tablet: xx99MarkTwoHeadphoneCategoryImageTablet,
             desktop: xx99MarkTwoHeadphoneCategoryImageDesktop,
         },
+        cartImage: cartXX99MarkTwoHeadphones,
         new: true,
         price: 2999,
         description:
@@ -495,6 +507,7 @@ export const data: Product[] = [
             tablet: zx7SpeakerCategoryImageTablet,
             desktop: zx7SpeakerCategoryImageDesktop,
         },
+        cartImage: cartZX7Speakers,
         new: false,
         price: 3500,
         description:
@@ -585,6 +598,7 @@ export const data: Product[] = [
             tablet: zx9SpeakerCategoryImageTablet,
             desktop: zx9SpeakerCategoryImageDesktop,
         },
+        cartImage: cartZX9Speakers,
         new: true,
         price: 4500,
         description:

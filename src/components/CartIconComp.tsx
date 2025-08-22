@@ -16,7 +16,7 @@ const CartIconComp = () => {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
     const openModal = () => {
-        if (dialogRef.current) {
+        if (dialogRef.current && cartQuantity) {
             dialogRef.current.showModal();
         }
     };
@@ -35,12 +35,10 @@ const CartIconComp = () => {
     return (
         <div className='relative'>
             <button
-                className='hover:cursor-pointer'
+                className='p-3 hover:cursor-pointer'
                 type='button'
                 onClick={() => {
-                    if (cartQuantity) {
-                        openModal();
-                    }
+                    openModal();
                 }}
             >
                 <img alt='Cart icon' src={CartIcon} />
@@ -91,7 +89,7 @@ const CartIconComp = () => {
                 </div>
             </Dialog>
             {cartQuantity > 0 ? (
-                <span className='bg-dark-orange absolute -top-3 -right-3 grid size-5 place-content-center rounded-full text-[12px] text-white'>
+                <span className='bg-dark-orange absolute -top-0.5 -right-0.5 grid size-5 place-content-center rounded-full text-[12px] text-white'>
                     {cartQuantity}
                 </span>
             ) : null}
