@@ -5,7 +5,7 @@ const GoBackButton = () => {
 
     return (
         <button
-            className='tablet:block text-body desktop:mt-20 desktop:mb-14 mt-8 mb-6 hidden text-black/50 hover:cursor-pointer'
+            className='text-body desktop:mt-20 desktop:mb-14 mt-8 mb-6 text-black/50 hover:cursor-pointer'
             type='button'
             onClick={() => {
                 router.history.back();
