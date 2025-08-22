@@ -29,7 +29,7 @@ const NavLinks = () => {
         <li key={l.label}>
             <Link
                 activeProps={{ className: 'text-dark-orange' }}
-                className='text-sub-title hover:text-light-orange/70 tracking-[2px] uppercase transition-colors duration-300 not-first:p-3'
+                className='text-sub-title hover:text-light-orange/70 p-3 tracking-[2px] uppercase transition-colors duration-300 not-first:p-3'
                 inactiveProps={{ className: 'text-white' }}
                 params={l.params}
                 to={l.to}
