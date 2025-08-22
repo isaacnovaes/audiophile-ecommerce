@@ -38,16 +38,18 @@ function GeneralProductCategoriesList() {
             {PRODUCT_CATEGORIES.map((c) => (
                 <Link
                     key={c.pid}
-                    className='group relative flex w-full flex-col items-center before:absolute before:bottom-0 before:-z-1 before:block before:h-[80%] before:w-full before:rounded-lg before:bg-gray-500'
+                    className='group relative flex w-full flex-col items-center before:absolute before:bottom-0 before:block before:h-[80%] before:w-full before:rounded-lg before:bg-gray-500'
                     params={c.params}
                     to={c.to}
                 >
                     <img
                         alt={c.imageAlt}
-                        className='desktop:h-[180px] mb-2 h-[108px]'
+                        className='desktop:h-[180px] relative z-2 mb-2 h-[108px]'
                         src={c.imageSrc}
                     />
-                    <h4 className='text-[15px] font-bold tracking-[1.07px] uppercase'>{c.label}</h4>
+                    <h4 className='relative z-2 text-[15px] font-bold tracking-[1.07px] uppercase'>
+                        {c.label}
+                    </h4>
                     <Button label='shop' variant='link' />
                 </Link>
             ))}
