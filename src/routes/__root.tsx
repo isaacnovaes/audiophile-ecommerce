@@ -5,7 +5,7 @@ import { CartContextProvider } from '../context/CartContext/CartContextProvider'
 
 function RootComponent() {
     return (
-        <div className='bg-gray-200 **:transition-colors **:duration-300'>
+        <div className='bg-gray-200'>
             <CartContextProvider>
                 <TopBar />
                 <Outlet />
