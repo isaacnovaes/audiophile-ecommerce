@@ -10,6 +10,8 @@
     --color-gray-700: #979797;
     --color-gray-500: #f1f1f1;
     --color-gray-200: #fafafa;
+    --color-gray-100: #cfcfcf;
+    --color-red-400: #cd2c2c;
 
     --font-*: initial;
     --font-manrope: 'Manrope', sans-serif;
@@ -63,6 +65,8 @@
     --spacing: 4px;
 }
 
+@custom-variant aria-invalid (&[aria-invalid="true"]);
+
 @layer utilities {
     .bg-home-zx7-speaker {
         background-image: url('./assets/home/mobile/speaker-zx7.jpg');
@@ -93,4 +97,15 @@
 
 body:has(dialog[open]) {
     overflow: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-black);
+    -webkit-box-shadow: 0 0 0 40rem #fff inset;
+}
+
+label.radio-input:has(> input[type='radio']):has(> span) > span {
+    text-box-trim: trim-both;
 }
