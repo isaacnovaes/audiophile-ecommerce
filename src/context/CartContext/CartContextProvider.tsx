@@ -7,18 +7,15 @@ export const CartContextProvider = (props: { readonly children: ReactNode }) => 
 
     const addCartProduct = useCallback((product: Product) => {
         setCart((c) => {
-            const newCart = structuredClone(c);
-            if (c.has(product.name)) {
-                const existingProduct = newCart.get(product.name);
-                if (existingProduct) {
-                    existingProduct.quantity++;
-                    return newCart;
-                }
-                return c;
+            const cartClone = structuredClone(c);
+            const existingProduct = cartClone.get(product.name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cartClone.set(product.name, { item: product, quantity: 1 });
             }
 
-            newCart.set(product.name, { item: product, quantity: 1 });
-            return newCart;
+            return cartClone;
         });
     }, []);
 

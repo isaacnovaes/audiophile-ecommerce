@@ -10,7 +10,9 @@ export type TCartContext = {
 
 export const CartContext = createContext<TCartContext | null>(null);
 
-export const useCart = () => {
+export function useCart(): Cart[];
+export function useCart(productName: string): Cart | undefined;
+export function useCart(productName?: string) {
     const context = useContext(CartContext);
 
     if (!context) {
@@ -19,8 +21,12 @@ export const useCart = () => {
 
     const { cart } = context;
 
-    return cart;
-};
+    if (productName) {
+        return cart.get(productName);
+    }
+
+    return [...cart.values()];
+}
 
 export const useAddCartProduct = () => {
     const context = useContext(CartContext);

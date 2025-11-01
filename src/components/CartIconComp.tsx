@@ -7,7 +7,7 @@ import CartList from './CartList';
 import Dialog from './Dialog';
 
 const CartIconComp = () => {
-    const cart = [...useCart().values()];
+    const cart = useCart();
     const cartQuantity = cart.reduce((sum, c) => sum + c.quantity, 0);
     const cartTotal = cart.reduce((sum, c) => sum + c.item.price * c.quantity, 0);
 
