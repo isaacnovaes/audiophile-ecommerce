@@ -15,7 +15,7 @@ const FormRadioInput = (props: Props) => {
             htmlFor={id}
         >
             <input
-                className='checked:ring-dark-orange size-5 appearance-none rounded-full border-1 border-gray-100 ring-5 ring-transparent ring-offset-4 transition-shadow ring-inset'
+                className='checked:ring-dark-orange size-5 appearance-none rounded-full border-1 border-gray-100 ring-5 ring-transparent ring-offset-4 transition-shadow ring-inset hover:cursor-pointer'
                 id={id}
                 type='radio'
                 value={value}
