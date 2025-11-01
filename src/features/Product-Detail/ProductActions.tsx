@@ -9,8 +9,7 @@ import type { Product } from '../../types/global';
 export const ProductActions = ({ product }: { readonly product: Product }) => {
     const addCartProduct = useAddCartProduct();
     const removeCartProduct = useRemoveCartProduct();
-    const cart = useCart();
-    const cartProduct = cart.get(product.name);
+    const cartProduct = useCart(product.name);
 
     return (
         <>

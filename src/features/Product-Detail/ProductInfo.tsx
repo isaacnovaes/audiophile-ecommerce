@@ -1,7 +1,7 @@
 import type { Product } from '../../types/global';
 import { BREAKPOINTS } from '../../utils/constants';
 import { formatMoney } from '../../utils/formatters';
-import { ProductActions } from './CartActions';
+import { ProductActions } from './ProductActions';
 
 const ProductInfo = ({ product }: { readonly product: Product }) => {
     return (
