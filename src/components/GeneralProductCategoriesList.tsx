@@ -32,7 +32,9 @@ const PRODUCT_CATEGORIES = linkOptions([
     },
 ]);
 
-function GeneralProductCategoriesList() {
+function GeneralProductCategoriesList(props: {
+    readonly onClick?: (productCategory: (typeof PRODUCT_CATEGORIES)[number]) => void;
+}) {
     return (
         <section className='tablet:flex-row tablet:gap-x-3 tablet:mt-21 desktop:mt-25 tablet:mb-24 desktop:mb-42 mt-8 mb-30 flex flex-col items-center gap-y-4'>
             {PRODUCT_CATEGORIES.map((c) => (
@@ -41,6 +43,9 @@ function GeneralProductCategoriesList() {
                     className='group relative flex w-full flex-col items-center before:absolute before:bottom-0 before:block before:h-[80%] before:w-full before:rounded-lg before:bg-gray-500'
                     params={c.params}
                     to={c.to}
+                    onClick={() => {
+                        props.onClick?.(c);
+                    }}
                 >
                     <img
                         alt={c.imageAlt}
