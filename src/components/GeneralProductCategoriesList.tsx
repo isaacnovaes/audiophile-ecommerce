@@ -36,7 +36,7 @@ function GeneralProductCategoriesList(props: {
     readonly onClick?: (productCategory: (typeof PRODUCT_CATEGORIES)[number]) => void;
 }) {
     return (
-        <section className='tablet:flex-row tablet:gap-x-3 tablet:mt-21 desktop:mt-25 tablet:mb-24 desktop:mb-42 mt-8 mb-30 flex flex-col items-center gap-y-4'>
+        <section className='tablet:flex-row tablet:gap-x-3 tablet:pt-21 desktop:pt-25 tablet:pb-24 desktop:pb-42 flex flex-col items-center gap-y-4 pt-8 pb-30'>
             {PRODUCT_CATEGORIES.map((c) => (
                 <Link
                     key={c.pid}

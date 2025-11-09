@@ -35,7 +35,7 @@ const CartIconComp = () => {
     return (
         <div className='relative'>
             <button
-                className='p-3 hover:cursor-pointer'
+                className='translate-x-3 p-3 hover:cursor-pointer'
                 type='button'
                 onClick={() => {
                     openModal();
@@ -89,7 +89,7 @@ const CartIconComp = () => {
                 </div>
             </Dialog>
             {cartQuantity > 0 ? (
-                <span className='bg-dark-orange absolute -top-0.5 -right-0.5 grid size-5 place-content-center rounded-full text-[12px] text-white'>
+                <span className='bg-dark-orange absolute -top-0.5 -right-3.5 grid size-5 animate-bounce place-content-center rounded-full text-[12px] text-white'>
                     {cartQuantity}
                 </span>
             ) : null}

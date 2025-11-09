@@ -7,7 +7,7 @@ const CategoryItem = ({ product }: { readonly product: Product }) => {
     return (
         <div
             key={product.id}
-            className='tablet:gap-y-[52px] desktop:gap-y-0 desktop:gap-x-[125px] desktop:flex-row tablet:first:mt-30 desktop:first:mt-40 desktop:even:flex-row-reverse desktop:mb-40 mb-30 flex flex-col items-center gap-y-8 first:mt-16'
+            className='tablet:gap-y-[52px] desktop:gap-y-0 desktop:gap-x-[125px] desktop:flex-row tablet:first:mt-30 desktop:first:mt-40 desktop:even:flex-row-reverse desktop:mb-15 tablet:mb-9 mb-22 flex flex-col items-center gap-y-8 first:mt-16'
         >
             <picture>
                 <source

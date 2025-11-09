@@ -15,7 +15,7 @@ import SummaryInfo from './SummaryInfo';
 const CheckoutFormSchema = z
     .object({
         name: z.string().min(5, 'at least 5 characters'),
-        email: z.string().email(),
+        email: z.string().email('invalid email'),
         phone: z.string().nonempty('required'),
         address: z.string().nonempty('required'),
         zip: z.string().nonempty('required'),
