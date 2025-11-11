@@ -5,7 +5,7 @@ const CartList = (props: { readonly cart: Cart[] }) => {
     return (
         <ul className='tablet:max-h-60 mb-[31px] flex max-h-50 flex-col gap-y-6 overflow-y-auto'>
             {props.cart.map((c) => (
-                <CartItem key={c.item.id} cart={c} />
+                <CartItem key={c.item.id} cartItem={c} />
             ))}
         </ul>
     );

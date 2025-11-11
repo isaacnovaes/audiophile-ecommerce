@@ -176,7 +176,7 @@ const CheckoutForm = (props: {
                 >
                     {cart.map((c) => (
                         <div key={c.item.id} className='grid grid-cols-[64px_1fr_64px] gap-x-4'>
-                            <CartItemInfo cart={c} />
+                            <CartItemInfo cartItem={c} />
                             <span
                                 className={`text-body self-center ${cart.length > 3 ? 'mr-2' : ''} text-right text-black/50`}
                             >
