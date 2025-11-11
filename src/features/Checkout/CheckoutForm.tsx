@@ -123,12 +123,12 @@ const CheckoutForm = (props: {
                     </div>
                 </div>
 
-                <div className=''>
+                <div>
                     <h5 className='text-dark-orange text-sub-title mb-4 uppercase'>
                         payment details
                     </h5>
 
-                    <div className='tablet:flex tablet:justify-between tablet:*:flex-[calc(50%-8px)] tablet:gap-x-4 tablet:mb-6'>
+                    <div className='tablet:flex tablet:justify-between tablet:*:flex-[calc(50%-8px)] tablet:gap-x-4 tablet:mb-6 mb-8'>
                         <h6 className='t-6 mb-4 text-[12px] font-bold tracking-[-0.21px] uppercase'>
                             payment method
                         </h6>
@@ -171,11 +171,15 @@ const CheckoutForm = (props: {
             </div>
             <div className='desktop:w-[350px] desktop:self-start tablet:mb-[116px] mb-[97px] rounded-lg bg-white px-6 py-8'>
                 <h6 className='text-h6 mb-[31px] uppercase'>summary</h6>
-                <div className='space-y-4'>
+                <div
+                    className={`space-y-4 ${cart.length > 3 ? 'max-h-[260px] overflow-x-hidden overflow-y-auto' : ''}`}
+                >
                     {cart.map((c) => (
                         <div key={c.item.id} className='grid grid-cols-[64px_1fr_64px] gap-x-4'>
                             <CartItemInfo cart={c} />
-                            <span className='text-body self-center text-right text-black/50'>
+                            <span
+                                className={`text-body self-center ${cart.length > 3 ? 'mr-2' : ''} text-right text-black/50`}
+                            >
                                 x{c.quantity}
                             </span>
                         </div>
