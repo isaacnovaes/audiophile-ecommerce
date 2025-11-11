@@ -10,7 +10,7 @@ interface ButtonProps extends Omit<ComponentPropsWithoutRef<'button'>, 'classNam
 
 const buttonClassNames = {
     primary: 'bg-dark-orange hover:bg-light-orange group-hover:bg-light-orange text-white',
-    'primary-black': 'bg-black hover:bg-gray-700 text-white',
+    'primary-black': 'bg-black hover:bg-gray-700 text-white focus-visible:outline-black!',
     'primary-transparent':
         'bg-transparent border-1 border-black hover:bg-black text-black hover:text-white',
     secondary: 'bg-white border-1 text-black border-black hover:text-white hover:bg-black',
