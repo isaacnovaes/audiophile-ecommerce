@@ -1,15 +1,19 @@
-import type { ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-const Dialog = (props: {
+interface DialogProps extends ComponentPropsWithoutRef<'dialog'> {
     readonly dialogRef: React.RefObject<HTMLDialogElement | null>;
     readonly children: ReactNode;
-}) => {
+}
+
+const Dialog = (props: DialogProps) => {
+    const { dialogRef, children, ...rest } = props;
     return (
         <dialog
-            ref={props.dialogRef}
+            {...rest}
+            ref={dialogRef}
             className='h-dvh max-h-dvh w-dvw max-w-none bg-transparent backdrop:bg-[#969696]/40'
         >
-            {props.children}
+            {children}
         </dialog>
     );
 };
