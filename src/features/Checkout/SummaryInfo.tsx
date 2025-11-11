@@ -1,4 +1,5 @@
 import type { Cart } from '../../types/global';
+import { getCartTotals } from '../../utils/checkout';
 import { formatMoney } from '../../utils/formatters';
 
 const SummaryInfoRow = (props: { readonly title: string; readonly price: number }) => {
@@ -13,11 +14,7 @@ const SummaryInfoRow = (props: { readonly title: string; readonly price: number 
 };
 
 const SummaryInfo = (props: { readonly cart: Cart[] }) => {
-    const total = props.cart.reduce((sum, c) => sum + c.item.price * c.quantity, 0);
-    const shipping = 50;
-    const vatPercentage = 0.2;
-    const vat = vatPercentage * (total + shipping);
-    const grandTotal = total + shipping + vat;
+    const { total, shipping, vat, grandTotal } = getCartTotals(props.cart);
 
     return (
         <div className='my-8'>
