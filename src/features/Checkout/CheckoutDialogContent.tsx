@@ -13,6 +13,10 @@ const CheckoutDialogContent = (props: {
     const [firstCartItem] = cart;
     const { grandTotal } = getCartTotals(cart);
 
+    if (cart.length === 0 || !props.dialogRef.current) {
+        return null;
+    }
+
     return (
         <AppContainer>
             <div className='h-80dvh mt-23 flex items-center'>
