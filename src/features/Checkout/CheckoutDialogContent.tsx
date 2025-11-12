@@ -13,7 +13,7 @@ const CheckoutDialogContent = (props: {
     const [firstCartItem] = cart;
     const { grandTotal } = getCartTotals(cart);
 
-    if (cart.length === 0 || !props.dialogRef.current) {
+    if (cart.length === 0) {
         return null;
     }
 
