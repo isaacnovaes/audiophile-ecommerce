@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Navigate } from '@tanstack/react-router';
 import { useEffect } from 'react';
 import { useForm, type SubmitErrorHandler, type SubmitHandler } from 'react-hook-form';
+import IconCashOnDelivery from '../../assets/icons/checkout/icon-cash-on-delivery.svg';
 import Button from '../../components/Button';
 import CartItemInfo from '../../components/CartItemInfo';
 import FormInput from '../../components/FormInput';
@@ -148,25 +149,38 @@ const CheckoutForm = (props: {
                         </div>
                     </div>
 
-                    <div className='tablet:flex tablet:gap-x-4 tablet:*:flex-1/2'>
-                        {isEMoneySelected ? (
-                            <>
-                                <FormInput
-                                    errorMessage={errors.eMoneyNumber?.message}
-                                    label='e-Money Number'
-                                    placeHolder='238521993'
-                                    {...register('eMoneyNumber')}
-                                />
+                    {isEMoneySelected ? (
+                        <div className='tablet:flex tablet:gap-x-4 tablet:*:flex-1/2'>
+                            <FormInput
+                                errorMessage={errors.eMoneyNumber?.message}
+                                label='e-Money Number'
+                                placeHolder='238521993'
+                                {...register('eMoneyNumber')}
+                            />
 
-                                <FormInput
-                                    errorMessage={errors.eMoneyPin?.message}
-                                    label='e-Money PIN'
-                                    placeHolder='6891'
-                                    {...register('eMoneyPin')}
-                                />
-                            </>
-                        ) : null}
-                    </div>
+                            <FormInput
+                                errorMessage={errors.eMoneyPin?.message}
+                                label='e-Money PIN'
+                                placeHolder='6891'
+                                {...register('eMoneyPin')}
+                            />
+                        </div>
+                    ) : (
+                        <div className='tablet:flex-row tablet:gap-x-8 flex flex-col justify-between gap-y-4'>
+                            <img
+                                alt='Cash on delivery'
+                                className='self-center'
+                                height={48}
+                                src={IconCashOnDelivery}
+                                width={48}
+                            />
+                            <p className='text-body grow text-justify text-black/50'>
+                                The &quot;Cash on Delivery&quot; option enables you to pay in cash
+                                when our delivery courier arrives at your residence. Just make sure
+                                your address is correct so that your order will not be cancelled.
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className='desktop:w-[350px] desktop:self-start tablet:mb-[116px] mb-[97px] rounded-lg bg-white px-6 py-8'>
