@@ -17,7 +17,7 @@ const Checkout = () => {
     const navigate = CheckoutRoute.useNavigate();
 
     const onValidForm: SubmitHandler<CheckOutForm> = (_formData) => {
-        document.body.scrollIntoView();
+        document.body.scrollIntoView({ behavior: 'smooth' });
         dialogRef.current?.showModal();
     };
 
