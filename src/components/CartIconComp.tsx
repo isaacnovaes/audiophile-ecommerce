@@ -33,7 +33,7 @@ const CartIconComp = () => {
     }, [cartQuantity]);
 
     return (
-        <div className='relative'>
+        <div className='relative' title={cartQuantity === 0 ? 'Empty cart' : 'Cart items'}>
             <button
                 className='translate-x-3 p-3 hover:cursor-pointer'
                 type='button'
