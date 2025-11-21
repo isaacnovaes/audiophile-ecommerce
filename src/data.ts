@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 import yx1EarphoneCategoryImageDesktop from './assets/product-yx1-earphones/desktop/image-category-page-preview.jpg';
 import yx1EarphoneCategoryImageMobile from './assets/product-yx1-earphones/mobile/image-category-page-preview.jpg';
 import yx1EarphoneCategoryImageTablet from './assets/product-yx1-earphones/tablet/image-category-page-preview.jpg';
